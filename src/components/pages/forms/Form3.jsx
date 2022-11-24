@@ -4,7 +4,7 @@ import { FaEdit, FaTrash } from 'react-icons/fa';
 export const Button = ({btnName, className, onClick,...props}) =>{
   return(
     <button 
-  className={`${className} capitalize rounded p-1 m-1 items-center border-transparent transition-colors ease-linear duration-350`}
+  className={`${className} uppercase font-bold rounded p-1 items-center border-transparent transition-colors ease-linear duration-350`}
   type={props.type || 'button'}
   onClick={onClick}
   > 
