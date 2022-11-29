@@ -127,7 +127,7 @@ const Input = ({onChange,errorMessage,label,...props}) =>{
       <>
         <label className="p-1 m-1 capitalize text-blue-900 font-serif font-bold">{label}</label>
         <input
-        className="bg-sky-200 p-1 m-2 rounded capitalize" 
+        className="bg-sky-200 p-1 m-2 rounded capitalize text-xl text-zinc-700" 
         onChange={onChange}
         {...props}
         />
@@ -178,7 +178,7 @@ const Select = ({onChange,label,errorMessage,options,value,...rest}) =>{
   return(
     <>
       <label className="p-1 m-1 capitalize text-blue-900 font-serif font-bold">{label}</label>
-      <select onChange={onChange} value={value} className="bg-sky-200 p-1 m-2 rounded capitalize" {...rest} >
+      <select onChange={onChange} value={value} className="bg-sky-200 p-1 m-2 rounded capitalize text-xl text-zinc-700" {...rest} >
         { options.map((option)=>{
           if(option.id ===1){
             return <option value={option.value} key={option.id} disabled defaultValue className="bg-sky-200 ">{option.label}</option>
@@ -208,8 +208,9 @@ const Form4 = () => {
     e.preventDefault();
     console.log(formValues);
   }
+  
   return (
-    <Card>
+    <Card className={`bg-slate-400`}>
       <div className="bg-cyan-100 max-w-3xl w-screen mx-auto grid items-center rounded">
       <form onSubmit={onSubmitHandle} >
         <h1 className="capitalize flex text-2xl text-blue-800 font-bold place-content-center">resume</h1>
