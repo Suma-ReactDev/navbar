@@ -1,4 +1,4 @@
-import {useState, useRef, useEffect} from 'react'
+import {useState} from 'react'
 import {NavLink} from 'react-router-dom'
 import Dropdown from './Dropdown'
 import { navItems } from './NavItems'
@@ -23,7 +23,8 @@ const Navbar = () => {
                   onClick={()=>{setDropdown(!dropdown)}}
                   >
                     <NavLink
-                      to={item.path}
+              
+              to={item.path}
                       className={({isActive})=>isActive?`${activeLink}`:`${normalLink}`}
                       >{item.title}<RiArrowDropDownLine className='absolute -right-2 pr-1 rounded-full font-extrabold text-3xl'
                       onClick={()=>{setDropdown(!dropdown)}}
