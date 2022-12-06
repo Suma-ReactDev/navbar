@@ -1,7 +1,7 @@
-import {Navbar} from './components/main'
 import {Routes, Route} from 'react-router-dom'
-import {Home, Form1, App2, Form3, Form4, Form5, Login, NoPageMatch, Signup} from './components/main'
+import {Navbar, Home, Form1, App2, Form3, Form4, Form5, Login, NoPageMatch, Signup, PaginationProvider} from './components/main'
 import {SingleEmployee} from './components/pages/forms/Form5';
+
 function App() {
   return (
     <>
@@ -14,7 +14,7 @@ function App() {
         <Route path='form3' element={<Form3 />} />
         <Route path='form4' element={<Form4 />} />
         <Route path='form5' >
-          <Route index element={<Form5 />} />
+          <Route index element={<PaginationProvider><Form5 /></PaginationProvider>} />
           <Route path=':id' element={<SingleEmployee />} />
         </Route>
         <Route path='/' element={<Login />} />
